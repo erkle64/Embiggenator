@@ -13,7 +13,7 @@ Extract everything inside the zip into your Foundry folder.
 
 #### Usage
 
-Edit BepInEx/config/com.erkle64.Embiggenator.cfg to change settings.
+Edit BepInEx\\config\\com.erkle64.Embiggenator.cfg to change settings.
 
 
 #### Compatibility
