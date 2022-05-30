@@ -27,9 +27,9 @@ namespace Embiggenator
         {
             log.LogMessage("Registering PluginComponent in Il2Cpp");
 
-            var config_additionalInventorySlots = Config.Bind("Inventory", "additionalSlots", 32, "Number of slots to add to character inventory space.");
-            PluginComponent.additionalInventorySlots = config_additionalInventorySlots.Value;
-            if (PluginComponent.additionalInventorySlots < 0) PluginComponent.additionalInventorySlots = 0;
+            var config_inventorySlots = Config.Bind("Inventory", "inventorySlots", 72, "Number of slots for character inventory space.");
+            PluginComponent.inventorySlots = config_inventorySlots.Value;
+            if (PluginComponent.inventorySlots < 0) PluginComponent.inventorySlots = 0;
 
             try
             {
@@ -48,8 +48,8 @@ namespace Embiggenator
             {
                 var harmony = new Harmony(GUID);
 
-                var original = AccessTools.Method(typeof(CharacterManager), "Init");
-                var post = AccessTools.Method(typeof(PluginComponent), "Init");
+                var original = AccessTools.Method(typeof(CharacterManager), "joinWorld");
+                var post = AccessTools.Method(typeof(PluginComponent), "joinWorld");
                 harmony.Patch(original, postfix: new HarmonyMethod(post));
             }
             catch
