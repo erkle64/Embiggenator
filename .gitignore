@@ -1,0 +1,6 @@
+
+Embiggenator/.vs/*
+Embiggenator/obj/*
+Embiggenator/bin/*
+Libraries/*.dll
+.vs/*
