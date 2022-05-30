@@ -1,7 +1,9 @@
 # Embiggenator for [Foundry](https://www.foundry-game.com/)
 
 A mod to embiggen things.
-Currently adds a configurable amount of slots to the character inventory. 32 by default.
+Changes the character inventory size. 72 by default.
+
+## WARNING: Currently this mod is unable to decrease your inventory size after it has increased it.
 
 #### Installation
 
@@ -14,7 +16,6 @@ Extract everything inside the zip into your Foundry folder.
 #### Usage
 
 Edit BepInEx\\config\\com.erkle64.Embiggenator.cfg to change settings.
-
 
 #### Compatibility
 
