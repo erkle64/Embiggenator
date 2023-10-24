@@ -1,6 +1,11 @@
+/Packages
+/Embiggenator/obj
+/Embiggenator/bin
+/Libraries
+.vs
+/MigrationBackup
+/Libraries
+/publicized_assemblies
+/Licenses
+/AssemblyPublicizer.exe
 
-Embiggenator/.vs/*
-Embiggenator/obj/*
-Embiggenator/bin/*
-Libraries/*.dll
-.vs/*

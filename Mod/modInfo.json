@@ -1,0 +1,9 @@
+{
+  "identifier": "erkle64.Embiggenator",
+  "displayName": "Embiggenator",
+  "assetBundles": [ ],
+  "assemblies": [
+    "Embiggenator.dll"
+  ]
+}
+
