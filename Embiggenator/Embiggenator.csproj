@@ -11,8 +11,8 @@
     <Reference Include="0Harmony">
       <HintPath>$(FoundryAssembliesPath)0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Main" Publicize="true">
-      <HintPath>..\publicized_assemblies\Main.dll</HintPath>
+    <Reference Include="Main">
+      <HintPath>$(FoundryAssembliesPath)Main.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(FoundryAssembliesPath)UnityEngine.CoreModule.dll</HintPath>
@@ -22,14 +22,10 @@
     </Reference>
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command='$(SolutionDir)AssemblyPublicizer.exe --input="$(FoundryAssembliesPath)Main.dll" --output="$(SolutionDir)publicized_assemblies\Main.dll"' />
-  </Target>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command='if not exist "$(TargetModDir)" mkdir "$(TargetModDir)"' />
-    <Exec Command='copy /Y "$(SolutionDir)Mod\*.*" "$(TargetModPath)"' />
-    <Exec Command='copy /Y "$(TargetPath)" "$(TargetModPath)"' />
+    <Exec Command="if not exist &quot;$(TargetModDir)&quot; mkdir &quot;$(TargetModDir)&quot;" />
+    <Exec Command="copy /Y &quot;$(SolutionDir)Mod\*.*&quot; &quot;$(TargetModPath)&quot;" />
+    <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;$(TargetModPath)&quot;" />
   </Target>
 
   <PropertyGroup Condition="'$(OS)' == 'Windows_NT'">

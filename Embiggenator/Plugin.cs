@@ -1,4 +1,4 @@
-using Channel3.ModKit;
+using C3.ModKit;
 using HarmonyLib;
 using Unfoundry;
 
@@ -11,7 +11,7 @@ namespace Embiggenator
             MODNAME = "Embiggenator",
             AUTHOR = "erkle64",
             GUID = AUTHOR + "." + MODNAME,
-            VERSION = "0.2.0";
+            VERSION = "1.2.0";
 
         public static LogSource log;
         private Config _config;
@@ -24,7 +24,7 @@ namespace Embiggenator
             _config = new Config(GUID);
             _config
                 .Group("Inventory")
-                    .Entry(out var inventorySlotsEntry, "Slot Count", 64, "Total number of inventory slots players should have.")
+                    .Entry(out var inventorySlotsEntry, "Slot Count", 70, "Total number of inventory slots players should have.")
                 .EndGroup()
                 .Load()
                 .Save();
