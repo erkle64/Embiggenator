@@ -17,6 +17,12 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(FoundryAssembliesPath)UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(FoundryAssembliesPath)UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(FoundryAssembliesPath)UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Unfoundry">
       <HintPath>$(FoundryModsPath)A_Unfoundry\Unfoundry.dll</HintPath>
     </Reference>
